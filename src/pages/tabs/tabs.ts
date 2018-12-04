@@ -1,8 +1,5 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { DevicePage } from '../device/device';
-import { FilesPage } from '../files/files';
-import { ChannelsPage } from '../channels/channels';
 
 /**
  * Generated class for the TabsPage page.
