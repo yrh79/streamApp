@@ -21,7 +21,7 @@ export class MenuPage {
 
   @ViewChild(Nav) nav: Nav;
 
-  pages: PageInterface = [
+  pages: PageInterface[] = [
     { title: 'Devices', pageName: 'DevicesPage', tableComponent: 'DevicePage', index: 0, icon: 'videocam' },
     { title: 'Files', pageName: 'FilesPage', tableComponent: 'FilesPage', index: 1, icon: 'recording' },
     { title: 'Channels', pageName: 'ChannelsPage', tableComponent: 'ChannelsPage', index: 2, icon: 'closed-captioning' },
