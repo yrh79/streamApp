@@ -18,11 +18,7 @@ export class LoginPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad LoginPage');
-  }
-
   doLogin() {
-    console.log("test")
+    this.navCtrl.setRoot('MenuPage');
   }
 }

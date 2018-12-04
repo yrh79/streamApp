@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { DevicePage } from '../device/device';
+import { FilesPage } from '../files/files';
+import { ChannelsPage } from '../channels/channels';
 
 /**
  * Generated class for the TabsPage page.
@@ -15,7 +18,14 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class TabsPage {
 
+  deviceRoot = 'DevicePage';
+  filesRoot = 'FilesPage';
+  channelsRoot = 'ChannelsPage';
+
+  myIndex: number;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.myIndex = navParams.data.tabIndex || 0;
   }
 
   ionViewDidLoad() {
