@@ -28,7 +28,9 @@ export class MenuPage {
   ]
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    
   }
+
 
   openPage(page: PageInterface) {
     let params = {};
@@ -61,8 +63,23 @@ export class MenuPage {
     return;
   }
 
+  //hide tabs when it is 'hide' is true
+  hideTabsConditional(hide: boolean) {
+    let tabs = document.querySelectorAll('.tabbar');
+    if (tabs !== null) {
+      Object.keys(tabs).map((key) => {
+        if (hide) {
+          tabs[key].style.transform = 'translateY(0px)';
+          return;
+        }
+        tabs[key].style.transform = 'translateY(56px)';
+      });
+    }
+  }
+
   onSplitChange($event) {
     console.log($event._visible);
+    this.hideTabsConditional(!($event._visible));
   }
 
 }
