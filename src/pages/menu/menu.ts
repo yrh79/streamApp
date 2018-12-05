@@ -61,4 +61,8 @@ export class MenuPage {
     return;
   }
 
+  onSplitChange($event) {
+    console.log($event._visible);
+  }
+
 }
